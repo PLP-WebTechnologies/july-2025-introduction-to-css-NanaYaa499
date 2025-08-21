@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Basics & The Box Model</title>
+  <meta name="description" content="Practice CSS selectors, basic properties, and the box model (margin, border, padding, content)." />
+  <!-- Link external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>CSS Basics & The Box Model</h1>
+    <p class="tagline">Styling text, laying out boxes, and understanding spacing</p>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#cards">Cards</a></li>
+        <li><a href="#box-model">Box Model Demo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="typography" aria-labelledby="typography-heading">
+      <h2 id="typography-heading">Typography & Basic Styling</h2>
+      <p>
+        This page shows basic CSS selectors and properties: <code>color</code>, <code>font-size</code>,
+        <code>background</code>, <code>margin</code>, <code>padding</code>, <code>border</code>, and more.
+      </p>
+      <p class="note">Tip: Inspect elements in your browser dev tools to see applied styles.</p>
+      <button class="btn">Primary Button</button>
+    </section>
+
+    <section id="cards" aria-labelledby="cards-heading">
+      <h2 id="cards-heading">Card Layout (Spacing & Alignment)</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Card One</h3>
+          <p>A simple card with margin (outside), padding (inside), and a border.</p>
+        </article>
+        <article class="card">
+          <h3>Card Two</h3>
+          <p>Cards demonstrate consistent spacing and sizing using the box model.</p>
+        </article>
+        <article class="card">
+          <h3>Card Three</h3>
+          <p>Try changing padding/border in <code>styles.css</code> to see the effect.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="box-model" aria-labelledby="box-model-heading">
+      <h2 id="box-model-heading">The Box Model (Visual Demo)</h2>
+
+      <div class="box-explainer">
+        <p>
+          Each element is a box: <strong>content</strong> inside <strong>padding</strong>, then <strong>border</strong>,
+          then <strong>margin</strong>. The demo boxes below use the same declared width but different padding/border
+          so you can observe the impact.
+        </p>
+      </div>
+
+      <div class="box-row">
+        <div class="box demo-a">
+          <strong>Demo A</strong>
+          <span>padding: 8px; border: 2px;</span>
+        </div>
+        <div class="box demo-b">
+          <strong>Demo B</strong>
+          <span>padding: 24px; border: 8px;</span>
+        </div>
+      </div>
+
+      <p class="caption">
+        With <code>box-sizing: content-box</code>, padding and border increase total size. With
+        <code>box-sizing: border-box</code>, total width stays fixed (padding/border are included).
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 • CSS Practice Page</p>
+  </footer>
+</body>
+</html>

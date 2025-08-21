@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* keeps total width predictable (includes padding+border) */
+}
+
+:root {
+  --bg: #f7f7fb;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --primary-ink: #ffffff;
+  --border: #e5e7eb;
+  --accent: #f0f9ff;
+}
+
+/* 2) Base page styles */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* 3) Header + nav */
+.site-header {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 16px;
+}
+
+.site-header h1 {
+  margin: 0 0 4px;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.tagline {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--primary);
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.nav a:hover,
+.nav a:focus {
+  border-color: var(--primary);
+  background: var(--accent);
+  outline: none;
+}
+
+/* 4) Layout container */
+.container {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* 5) Typography & button demo */
+h2 {
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.note {
+  background: var(--accent);
+  border: 1px solid #dbeafe;
+  color: #0f172a;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--primary);
+  color: var(--primary-ink);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.9;
+}
+
+/* 6) Card layout demonstrating margin/padding/border */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px; /* spacing between cards (outside each card) */
+  margin-top: 12px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border); /* border (between padding and margin) */
+  border-radius: 12px;
+  padding: 16px; /* inside spacing */
+  /* margin is handled by grid gap above */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+/* 7) Box model demo (two boxes with same declared width) */
+.box-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.box {
+  width: 260px;              /* declared width (compare total sizes visually) */
+  background: #fff;
+  border: 2px solid #d1d5db; /* border contributes to total size (unless border-box) */
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  padding: 8px;              /* default padding (will differ per demo) */
+}
+
+.box strong {
+  font-size: 1rem;
+}
+
+.box span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Demo A: lighter padding/border */
+.demo-a {
+  padding: 8px;
+  border-width: 2px;
+}
+
+/* Demo B: heavier padding/border */
+.demo-b {
+  padding: 24px;
+  border-width: 8px;
+}
+
+/* 8) Footer */
+.site-footer {
+  margin-top: 40px;
+  padding: 20px 16px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
